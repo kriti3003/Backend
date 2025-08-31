@@ -1,0 +1,407 @@
+/* App.css */
+.app {
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  color: #333;
+}
+
+.app-header {
+  background-color: #282c34;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.error-banner {
+  background-color: #fee;
+  border: 1px solid #fcc;
+  color: #c66;
+  padding: 0.75rem;
+  margin: 1rem;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error-banner button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #c66;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+.app-main {
+  display: flex;
+  min-height: calc(100vh - 80px);
+}
+
+.sidebar {
+  width: 300px;
+  background-color: #f8f9fa;
+  border-right: 1px solid #e9ecef;
+  padding: 1rem;
+}
+
+.main-content {
+  flex: 1;
+  padding: 1rem;
+}
+
+/* Search Bar */
+.search-bar {
+  margin-bottom: 1.5rem;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Skills Filter */
+.skills-filter {
+  margin-bottom: 1.5rem;
+}
+
+.skills-filter h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #666;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.skill-button {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s;
+}
+
+.skill-button:hover {
+  background-color: #e9ecef;
+}
+
+.skill-button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.clear-filter {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+.clear-filter:hover {
+  background-color: #5a6268;
+}
+
+/* Profile List */
+.profiles-header h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.profile-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.profile-card {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1rem;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.profile-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+.profile-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: #007bff;
+}
+
+.profile-card .email {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-card .description {
+  color: #555;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.profile-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-tag {
+  background-color: #e9ecef;
+  color: #495057;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+}
+
+.profile-links {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.profile-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.profile-link:hover {
+  text-decoration: underline;
+}
+
+/* Profile Detail */
+.profile-detail {
+  max-width: 800px;
+}
+
+.profile-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.back-button {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #5a6268;
+}
+
+.profile-detail h1 {
+  margin: 0;
+  color: #333;
+}
+
+.profile-detail .email {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.profile-detail .description {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.profile-section {
+  margin-bottom: 2rem;
+}
+
+.profile-section h2 {
+  margin-bottom: 1rem;
+  color: #333;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 0.5rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.5rem;
+}
+
+.skill-item {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.projects-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.project-item {
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+
+.project-item h3 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.work-experience-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.work-item {
+  border-left: 4px solid #007bff;
+  padding-left: 1rem;
+}
+
+.work-item h3 {
+  margin: 0 0 0.25rem 0;
+  color: #333;
+}
+
+.work-item .company {
+  color: #666;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.profile-external-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.external-link {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.external-link:hover {
+  background-color: #0056b3;
+}
+
+/* Projects List Component */
+.projects-sidebar {
+  margin-top: 1rem;
+}
+
+.projects-sidebar h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #666;
+}
+
+.projects-sidebar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-sidebar-item {
+  background-color: white;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.project-sidebar-item h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.project-sidebar-item p {
+  margin: 0;
+  color: #666;
+  font-size: 0.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+}
+
+.empty-state h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app-main {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .profile-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .profile-detail-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
